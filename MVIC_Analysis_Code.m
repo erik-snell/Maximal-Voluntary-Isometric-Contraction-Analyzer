@@ -1,7 +1,7 @@
 %load in data
-filepath = '/Users/eriksnell/Desktop/Spring of 2026/Thesis Neuro & Force Files/Compiled Trials'
+filepath = '' %insert file path
 
-channel = importdata('S_017_MVIC_Trials.xlsx');
+channel = importdata(''); %insert text file data
 
 %pull out the pre versus post MVIC
 pre_MVIC_force_profile = channel.data (:,1:2:5);
@@ -48,4 +48,4 @@ end
 
 compiled_MVIC = [pre_MVIC_epoch(:),post_MVIC_epoch(:)]
 
-   
+   plot (pre_MVIC_force_profile(:,2)), xlabel("Time Points"), ylabel ("Volts");
